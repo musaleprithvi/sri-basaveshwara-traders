@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Sri Basaveshwara Traders - Water Purifiers, CCTV Systems, Inverters & Batteries in Sirwar.">
+    <meta name="keywords" content="CCTV Sirwar, Water Purifier Sirwar, Inverter Shop Sirwar">
+    <meta name="author" content="Sri Basaveshwara Traders">
+
+    <title>Sri Basaveshwara Traders</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f9fafc;
+            color: #111;
+        }
+
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 60px;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background: white;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 20px;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: #0f172a;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 14px;
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-left: 25px;
+            color: #444;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Background images layer */
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: heroSlider 20s infinite;
+            z-index: -2;
+        }
+
+        /* Dark overlay */
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: -1;
+        }
+
+        /* Animation keyframes */
+        @keyframes heroSlider {
+            0% {
+                background-image: url("hero1.jpeg");
+            }
+
+            24% {
+                background-image: url("hero1.jpeg");
+            }
+
+            25% {
+                background-image: url("hero2.jpeg");
+            }
+
+            49% {
+                background-image: url("hero2.jpeg");
+            }
+
+            50% {
+                background-image: url("hero3.jpeg");
+            }
+
+            74% {
+                background-image: url("hero3.jpeg");
+            }
+
+            75% {
+                background-image: url("hero4.jpeg");
+            }
+
+            99% {
+                background-image: url("hero4.jpeg");
+            }
+
+            100% {
+                background-image: url("hero1.jpeg");
+            }
+        }
+
+
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background: #2563eb;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 15px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .service-box {
+            background: #f1f5f9;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .contact {
+            background: #f1f5f9;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px 0;
+            font-size: 17px;
+        }
+
+        .owner {
+            text-align: center;
+        }
+
+        .owner img {
+            width: 280px;
+            /* Bigger size */
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 6px solid #2563eb;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transition: 0.4s ease;
+        }
+
+        .owner img:hover {
+            transform: scale(1.05);
+        }
+
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            border-radius: 20px;
+            border: 0;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            padding: 18px;
+            border-radius: 50%;
+            font-size: 22px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .call-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #0f172a;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+        .gallery-slider {
+            max-width: 750px;
+            height: 480px;
+            margin: 70px auto;
+            overflow: hidden;
+            border-radius: 30px;
+            background: linear-gradient(145deg, #ffffff, #f1f5f9);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+            height: 100%;
+        }
+
+        .slides img {
+            min-width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 25px;
+            transition: transform 4.5s ease;
+        }
+
+        /* Soft zoom animation */
+        .slides img.active-zoom {
+            transform: scale(1);
+        }
+
+
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="logo">
+                SRI BASAVESHWARA TRADERS
+                <span>ಶ್ರೀ ಬಸವೇಶ್ವರ ಟ್ರೇಡರ್ಸ್</span>
+            </div>
+            <nav>
+                <a href="#products">Products</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div>
+            <h1> SRI BASAVESHWARA TRADERS</h1>
+            <p>Powering Homes. Securing Businesses.</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </div>
+    <section class="slider-section">
+        <h2 class="section-title">Our Featured Products</h2>
+
+        <div class="gallery-slider" id="gallerySlider">
+            <div class="slides">
+                <img src="slide1.jpeg">
+                <img src="slide2.jpeg">
+                <img src="slide3.jpeg">
+                <img src="slide4.jpeg">
+                <img src="slide5.jpeg">
+                <img src="slide6.jpeg">
+                <img src="slide7.jpeg">
+                <img src="slide8.jpeg">
+                <img src="slide9.jpeg">
+                <img src="slide10.jpeg">
+                <img src="slide11.jpeg">
+                <img src="slide12.jpeg">
+                <img src="slide13.jpeg">
+                <img src="slide14.jpeg">
+                <img src="slide15.jpeg">
+                <img src="slide16.jpeg">
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2 class="section-title">Our Products</h2>
+        <div class="products">
+
+            <div class="card">
+                <img src="water1.jpeg" alt="RO Water Purifier">
+                <h3>RO Water Purifier</h3>
+                <p>Advanced RO + UV purification for home use.</p>
+            </div>
+
+            <div class="card">
+                <img src="water2.jpeg" alt="Commercial Water Purifier">
+                <h3>Commercial Water Purifier</h3>
+                <p>High-capacity purifier for shops and offices.</p>
+            </div>
+
+            <div class="card">
+                <img src="cctv1.jpeg" alt="Dome CCTV Camera">
+                <h3>Dome CCTV Camera</h3>
+                <p>HD indoor security surveillance system.</p>
+            </div>
+
+            <div class="card">
+                <img src="cctv2.jpeg" alt="Bullet CCTV Camera">
+                <h3>Bullet CCTV Camera</h3>
+                <p>Weatherproof outdoor security solution.</p>
+            </div>
+
+            <div class="card">
+                <img src="inverter1.jpeg" alt="Inverter">
+                <h3>Inverter</h3>
+                <p>Reliable power backup solution.</p>
+            </div>
+
+            <div class="card">
+                <img src="battery1.jpeg" alt="Battery">
+                <h3>Battery</h3>
+                <p>Long-lasting performance and durability.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services">
+            <div class="service-box">
+                <h3>CCTV Installation</h3>
+                <p>Professional indoor & outdoor CCTV setup.</p>
+            </div>
+            <div class="service-box">
+                <h3>Water Purifier Service</h3>
+                <p>RO installation and maintenance support.</p>
+            </div>
+            <div class="service-box">
+                <h3>Inverter Installation</h3>
+                <p>Battery & inverter installation with warranty.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact">
+            <p><strong>Owner:</strong> Pruthvi Mattikatti</p>
+            <p><strong>Phone:</strong> 9148387971 | 8088552026</p>
+            <p><strong>Email:</strong> sribasaveshwaratraders@gmail.com</p>
+            <p><strong>GSTIN:</strong> 29GQIPM7095D1Z9</p>
+            <p><strong>Location:</strong> Near Shivamatha Talkies, Sirwar - 584129</p>
+            <a href="tel:9148387971" class="call-btn">Call Now</a>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Find Us on Map</h2>
+        <iframe src="https://www.google.com/maps?q=Sirwar%20584129&output=embed"></iframe>
+    </section>
+
+    <section class="owner">
+        <h2 class="section-title">Proprietor</h2>
+        <img src="owner.jpeg" alt="Owner Photo">
+        <h3>Mr. Pruthvi Mattikatti</h3>
+    </section>
+
+    <footer>
+        © 2026 Sri Basaveshwara Traders | All Rights Reserved
+    </footer>
+
+    <a class="whatsapp" href="https://wa.me/919148387971" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="white">
+            <path
+                d="M19.11 17.57c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.67.14-.2.29-.77.95-.94 1.14-.17.19-.35.21-.64.07-.29-.14-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.12-.59.13-.13.29-.35.43-.52.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51l-.57-.01c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.44s1.02 2.83 1.16 3.02c.14.19 2 3.06 4.85 4.29.68.29 1.21.46 1.63.59.68.21 1.3.18 1.79.11.55-.08 1.72-.7 1.96-1.38.24-.67.24-1.25.17-1.38-.07-.13-.26-.21-.55-.35z" />
+            <path
+                d="M16 3C8.83 3 3 8.83 3 16c0 2.82.93 5.43 2.5 7.56L4 29l5.62-1.47C11.67 28.57 13.8 29 16 29c7.17 0 13-5.83 13-13S23.17 3 16 3zm0 23.5c-2.07 0-4.09-.6-5.82-1.73l-.42-.27-3.33.87.89-3.24-.28-.44C6.1 19.99 5.5 18.03 5.5 16 5.5 10.76 10.76 5.5 16 5.5S26.5 10.76 26.5 16 21.24 26.5 16 26.5z" />
+        </svg>
+    </a>
+    <script>
+        const slidesContainer = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        const total = images.length;
+
+        let index = 0;
+        let autoSlide;
+
+        function showSlide(i) {
+            slidesContainer.style.transform = `translateX(-${i * 100}%)`;
+
+            images.forEach(img => img.classList.remove("active-zoom"));
+            images[i].classList.add("active-zoom");
+        }
+
+        function nextSlide() {
+            index = (index + 1) % total;
+            showSlide(index);
+        }
+
+        function startAutoSlide() {
+            autoSlide = setInterval(nextSlide, 5000); // 5 seconds stable
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlide);
+        }
+
+        startAutoSlide();
+
+        // Pause on hover (more premium feel)
+        const slider = document.querySelector('.gallery-slider');
+        slider.addEventListener("mouseenter", stopAutoSlide);
+        slider.addEventListener("mouseleave", startAutoSlide);
+    </script>
+</body>
+
+</html>
